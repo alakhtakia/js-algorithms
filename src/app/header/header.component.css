@@ -1,0 +1,28 @@
+.top-menu {
+    position: fixed;
+    top: 0;
+    left: 270px;
+    right: 0;
+    background-color: #0275d8;
+    z-index: 9;
+}
+
+.top-menu > div:not(.logo) {
+    float: left;
+}
+.top-menu .title {
+    border-right: 1px solid #0275d8;
+    min-width: 270px;
+    cursor: pointer;
+}
+.top-menu .title h2 {
+    font-size: 22px;
+    padding: 22px 10px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+.top-menu .logo{
+      float: right;
+    margin-right: 10px;
+}

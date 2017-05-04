@@ -1,0 +1,12 @@
+.app-wrap{
+  height: 100vh;
+}
+
+.main-container{
+  width: calc(100% - 270px);
+    height: 100%;
+    float: right;
+   /* margin-top: 50px;*/
+    /* padding: 15px; */
+    box-sizing: border-box;
+}
