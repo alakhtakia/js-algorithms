@@ -1,11 +1,69 @@
 <div>
+<div>
   <h1>Bubble Sort</h1>
   <div class="row">
-    <input class="form-control" placeholder="Enter values as comma seperated" />
+    <input class="form-control" placeholder="Enter values as comma seperated" value [(ngModel)]="bubbleSortStr"/>
   </div>
   <div class="row">
-    <button type="button" class="btn btn-primary">
-      Single Toggle
+    <button type="button" class="btn btn-primary" (click)="sort('bubble')">
+      Sort
     </button>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{bsResult}}</span>
   </div>
 </div>
+
+
+<div>
+  <h1>Insertion Sort</h1>
+  <div class="row">
+    <input class="form-control" placeholder="Enter values as comma seperated" value [(ngModel)]="insertionSortStr" />
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="sort('insertion')">
+      Sort
+    </button>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{isResult}}</span>
+  </div>
+</div>
+
+<div>
+  <h1>Selection Sort</h1>
+  <div class="row">
+    <input class="form-control" placeholder="Enter values as comma seperated" value [(ngModel)]="selectionSortStr" />
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="sort('selection')">
+      Sort
+    </button>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{ssResult}}</span>
+  </div>
+</div>
+
+<div>
+  <h1>Merge Sort</h1>
+  <div class="row">
+    <input class="form-control"  placeholder="Enter values as comma seperated" value [(ngModel)]="mergeSortStr" />
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="sort('merge')">
+      Sort
+    </button>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{msResult}}</span>
+  </div>
+</div>
+
+<div>
+  <h1>Quick Sort</h1>
+  <div class="row">
+    <input class="form-control" placeholder="Enter values as comma seperated" value [(ngModel)]="quickSortStr" />
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="sort('quick')">
+      Sort
+    </button>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{qsResult}}</span>
+  </div>
+</div>
+
+<simple-notifications [options]="options"></simple-notifications>
+

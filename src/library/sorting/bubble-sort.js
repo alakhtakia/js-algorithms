@@ -18,22 +18,22 @@
    * @param {Array} array Input array
    * @return {Array} Sorted array.
    */
-   function bubbleSort(array) {
+   function bubbleSort(arr) {
     var swap;
     var temp
     do{
-      swap = false;      
-      arr.forEach((num,i)=>{
-        if(num>arr[i+1]){
+      swap = false; 
+      for(var i=0;i<arr.length;i++) {
+         if(arr[i]>arr[i+1]){
           temp = arr[i];
-          arr[i]=arr[i+1;
+          arr[i]=arr[i+1];
           arr[i+1]=temp;          
           swap=true;
         }
-      });
+      }
 
     } while(swap===true);
-    return array;
+    return arr;
   }
 
   exports.bubbleSort = bubbleSort;
