@@ -17,7 +17,9 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'binary-tree', component: BinaryTreeComponent }
+
 ];
 
 

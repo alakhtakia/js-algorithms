@@ -27,8 +27,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Installing bootstrap
 npm install --save @ng-bootstrap/ng-bootstrap
 
-## Install Angular 2 Material
-npm install --save @angular/material
+## Angular2-Notifications (https://github.com/flauc/angular2-notifications)
+
+npm install --save angular2-notifications
 
 ## Further help
 
