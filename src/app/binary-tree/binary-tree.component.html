@@ -1,3 +1,46 @@
-<p>
-  binary-tree works!
-</p>
+<div>
+<div>
+  <h1>Bubble Sort</h1>
+  <div class="row" style="margin-left: -15px;">
+  <div class="col-6">
+    <input class="form-control" placeholder="Enter values as comma seperated" value [(ngModel)]="input"/>
+  </div>
+  <div class="col-6">
+   <button type="button" class="btn btn-primary" (click)="addValue()">
+      Add to tree
+    </button>
+
+    <button type="button" class="btn btn-primary" (click)="visit()">
+      Visit tree
+    </button>
+  </div>
+
+  </div>
+  <div class="row" style="margin-left: -15px;">
+  <div class="col-6">
+    <input class="form-control" placeholder="Enter value to find in tree" value [(ngModel)]="searchInput"/>
+  </div>
+  <div class="col-6">
+   <button type="button" class="btn btn-primary" (click)="search()">
+      Search in tree
+    </button>
+  </div>
+  
+  </div>
+
+
+  <div class="row">
+   <span>{{result}}</span>
+   </div>
+   <div class="row">
+<canvas #myCanvas width="500" height="500">
+</canvas>
+
+
+ 
+   
+  </div>
+</div>
+</div>
+
+<simple-notifications [options]="options"></simple-notifications>
