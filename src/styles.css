@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0px;
+    padding: 0px;
+}
+
+h1{
+  font-size: 25px;
+  color: #039be5;
+}
+
+.row {
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.loading {
+    position: absolute;
+    color:#0275d8;
+    overflow: show;
+    margin: auto;
+    top: 30%;
+    left: 40%;
+    font-size: 48px;
+}
+.error-input{
+  border:1px solid red;
+}
+
+.result{
+  font-size: 18px;
+  margin-left: 25px;
+  color: green;
+}

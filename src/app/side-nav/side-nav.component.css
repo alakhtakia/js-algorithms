@@ -1,0 +1,39 @@
+.side-nav{
+    width: 270px;
+    height: calc(100% - 0px);
+    float: left;
+    border-right: 1px solid rgba(0,0,0,.14);
+    background: #fff;
+    color: #666;
+    z-index: 999;
+    -webkit-transition: left .5s ease;
+    -moz-transition: left .5s ease;
+    -ms-transition: left .5s ease;
+    -o-transition: left .5s ease;
+    transition: left .5s ease;
+}
+
+.side-nav .section h3 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    text-transform: uppercase;
+    margin: 15px 0;
+    margin-left: 10px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.header-section{
+  height: 68px;
+  border-bottom: 1px solid rgba(0,0,0,.14);
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 18px;
+  color: #039be5;
+  font-weight: 600;
+}
