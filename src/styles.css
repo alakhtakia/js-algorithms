@@ -32,3 +32,16 @@ h1{
   margin-left: 25px;
   color: green;
 }
+
+.btn-group{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.model{
+    position: absolute;
+    width: 50%;
+    top: 20%;
+    left: 20%;
+}
+.simple-notification.error .sn-progress-loader span { background: #900C3F !important; }

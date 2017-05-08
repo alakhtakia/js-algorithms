@@ -13,12 +13,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 // import {MdSnackBar} from '@angular/material';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { StringsComponent } from './strings/strings.component';
 
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'binary-tree', component: BinaryTreeComponent }
+  { path: 'binary-tree', component: BinaryTreeComponent },
+  { path: 'strings', component: StringsComponent }
 
 ];
 
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     SideNavComponent,
     HeaderComponent,
     BinaryTreeComponent,    
-    HomeComponent
+    HomeComponent, 
+    StringsComponent
   ],
   imports: [
     BrowserModule,

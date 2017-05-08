@@ -1,0 +1,28 @@
+<div>
+<div>
+  <h1>Find Unique String</h1>
+  <div class="row">
+    <input class="form-control" placeholder="Enter any string" value [(ngModel)]="uniqueStr"/>
+  </div>
+  <div class="row">
+    <div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-primary" (click)="unique()">Is unique</button>
+      <button type="button" class="btn btn-default" (click)="showCode('unique')">Show Code</button>
+    </div>
+    <span class="result"><i class="fa fa-laptop" aria-hidden="true"></i> Output:{{uResult}}</span>
+  </div>
+</div>
+</div>
+
+<simple-notifications [options]="options"></simple-notifications>
+<div class="model">
+  <div class="alert alert-success alert-dismissible" role="alert" [hidden]="isPopup">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="isPopup=true"><span aria-hidden="true">&times;</span></button>
+    <strong>Function!</strong> 
+     <pre style="font-size: 18px;">
+          <code>
+    {{code}}
+    </code>
+    </pre>
+  </div>
+</div>

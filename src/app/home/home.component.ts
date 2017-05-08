@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
   qsResult:string;  
   ssResult:string;
   bubbleSortAlgo:any;
+  isPopup:boolean;
+  code:string;
   public options = {
         position: ["bottom", "right"],
         timeOut: 0,
@@ -39,6 +41,7 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private _service: NotificationsService ) {    
+    this.isPopup=true;
   }
 
   ngOnInit() {
@@ -57,7 +60,7 @@ export class HomeComponent implements OnInit {
         break;
       case "selection":
         if(this.checkInput(this.selectionSortStr))
-          this.ssResult=insertionSort(this.selectionSortStr.split(',').map(Number));
+          this.ssResult=selectionSort(this.selectionSortStr.split(',').map(Number));
         break;
       case "merge":
         if(this.checkInput(this.mergeSortStr))
@@ -72,6 +75,32 @@ export class HomeComponent implements OnInit {
         break;
     }    
   } 
+
+  showCode(type){
+
+    switch (type) {
+      case "bubble":
+        this.code=bubbleSort.toString();
+        break;      
+      case "insertion":
+         this.code=insertionSort.toString();
+        break;
+      case "selection":
+        this.code=selectionSort.toString();        
+        break;
+      case "merge":
+        this.code=mergeSort.toString();
+        break;
+      case "quick":
+        this.code=quickSort.toString();
+        break;
+      default:
+        // code...
+        break;
+    }   
+    this.isPopup=false; 
+
+  }
 
   checkInput(str){
    if(str ==null || str==0){

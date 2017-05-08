@@ -19,6 +19,8 @@ export class BinaryTreeComponent implements OnInit {
   width:number;
   height:number;
   radius:number=35;
+  isPopup:boolean;
+  code:string;
   ctx:any;
   public options = {
     position: ["bottom", "right"],
@@ -34,6 +36,7 @@ export class BinaryTreeComponent implements OnInit {
 
     this.tree=new Tree(this.width,this.height); 
     this.result='';
+    this.isPopup=true;
   }
 
   ngOnInit() {
