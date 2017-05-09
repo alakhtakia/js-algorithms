@@ -1,7 +1,7 @@
-declare var isUnique: any;
 import { Component, OnInit } from '@angular/core';
 import { NotificationsService } from 'angular2-notifications';
-import './algo/string-unique';
+import { UniqueComponent } from './unique.component';
+
 @Component({
   selector: 'app-strings',
   templateUrl: './strings.component.html',
@@ -9,66 +9,41 @@ import './algo/string-unique';
 })
 export class StringsComponent implements OnInit {
 
-  uResult:string;
   isPopup:boolean;
   code:string;
-  uniqueStr:string;
   public options = {
         position: ["bottom", "right"],
         timeOut: 0,
         lastOnBottom: true,
   };
-
   constructor(private _service: NotificationsService ) { 
-    this.isPopup=true;
+    this.isPopup=false;
    }
 
   ngOnInit() {
   }
 
-  unique(){
-    if(this.checkInput(this.uniqueStr))
-      this.uResult= isUnique(this.uniqueStr.trim());
+  showCode(code){    
+    this.code=code;
+    this.isPopup=true; 
   }
 
-  checkInput(str){
-   if(str ==null || str==0){
-      this.showError('Enter string to check for uniqueness');    
-      return false;
-    } else{
-      return true;
-    }
+  close(){
+    this.isPopup=false;
   }
 
-  showCode(type){
-
-    switch (type) {
-      case "unique":
-        this.code=isUnique.toString();
-        break;      
-      case "insertion":         
-        break;      
-      default:
-        // code...
-        break;
-    }   
-    this.isPopup=false; 
-
-  }
-
-
-  showError(msg) {
+  showError(msg){
     this._service.error(
-        'Error',
-        msg,
-        {
-            showProgressBar: true,
-            pauseOnHover: false,
-            clickToClose: true,
-            timeOut:2000,    
-            animate:"fromLeft",           
-            maxLength: 0
-        }
-    )}
-
+      'Error',
+      msg,
+      {
+          showProgressBar: true,
+          pauseOnHover: false,
+          clickToClose: true,
+          timeOut:2000,    
+          animate:"fromLeft",           
+          maxLength: 0
+      }
+    )
+  }
 }

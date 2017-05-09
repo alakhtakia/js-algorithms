@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 // import {MdSnackBar} from '@angular/material';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { StringsComponent } from './strings/strings.component';
+import { UniqueComponent } from './strings/unique.component';
 
 
 
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     BinaryTreeComponent,    
     HomeComponent, 
-    StringsComponent
+    StringsComponent,
+    UniqueComponent
   ],
   imports: [
     BrowserModule,
